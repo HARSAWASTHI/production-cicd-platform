@@ -17,7 +17,7 @@ def health():
 
 @app.route("/metrics")
 def metrics():
-    return generate_latest, 200
+    return generate_latest(), 200
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
