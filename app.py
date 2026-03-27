@@ -5,7 +5,7 @@ import time
 
 app = Flask(__name__)
 
-REQUEST_COUNT = Counter('request_count', 'Total HTTP Requests'['method','endpoint','http_status'])
+REQUEST_COUNT = Counter('request_count', 'Total HTTP Requests', ['method','endpoint','http_status'])
 
 REQUEST_LATENCY = Histogram('request_latency_seconds', 'Request latency', ['endpoint'])
 
