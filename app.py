@@ -9,11 +9,11 @@ REQUEST_COUNT = Counter('request_count', 'Total HTTP Requests', ['method','endpo
 
 REQUEST_LATENCY = Histogram('request_latency_seconds', 'Request latency', ['endpoint'])
 
-@app.before_request()
+@app.before_request
 def start_timer():
     request.start_time=time.time()
 
-@app.after_request()
+@app.after_request
 def record_metrics(response):
     resp_time = time.time() - request.start_time
 
