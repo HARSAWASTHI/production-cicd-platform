@@ -43,6 +43,9 @@ docker run -p 5000:5000 app
 
 ## Screenshots
 
+<img width="1536" height="1024" alt="ChatGPT Image Mar 28, 2026 at 12_21_41 AM" src="https://github.com/user-attachments/assets/83461964-3022-464a-ab5f-aa4cc765710a" />
+
+
 
 ## Future Improvements
 
