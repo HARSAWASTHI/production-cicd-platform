@@ -35,6 +35,6 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_KEY }}
           script: |
-            cd home/ubuntu/app
+            cd home/ubuntu/
             docker-compose pull
             docker-compose up -d
