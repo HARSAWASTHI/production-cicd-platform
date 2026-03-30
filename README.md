@@ -31,14 +31,17 @@ This project is a containerized Flask application with integrated Prometheus met
 * Docker
 * GitHub Actions
 * Prometheus Client
+* Grafana
+* Nginx
+* Gunicorn 
 
 ## How to Run
 
 * Pushing code to master branch will trigger pipeline
 
 ```bash
-docker build -t app .
-docker run -p 5000:5000 app
+docker-compose pull
+docker-compose up -d
 ```
 
 ## Screenshots

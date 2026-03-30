@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+      web:
+        image: harsawasthi/flask-devops-app:latest
+        container-name: flask-app
+        expose: 
+          - "5000"
+        restart: always
+        networks:
+          - app_network
+
+      nginx:
+         image: nginx:latest
+         container_name: nginx_server
+         restart: always
+         ports:
+          - "80:80"
+         volumes:
+          - ./nginx/nginx_conf:/etc/nginx/nginx_conf:ro
+         depends_on:
+          - web
+         networks:
+          - app_network
+
+networks:   
+  app_network
