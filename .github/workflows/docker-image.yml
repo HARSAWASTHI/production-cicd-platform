@@ -35,6 +35,7 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_KEY }}
           script: |
+            rm -rf production-cicd-platform
             git clone https://github.com/HARSAWASTHI/production-cicd-platform.git
             cd /production-cicd-platform/infra 
             docker-compose pull
