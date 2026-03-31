@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_KEY }}
           script: |
-            pwd
+            cd /home/ubuntu
             docker-compose down 
             docker-compose pull
             docker-compose up -d
