@@ -38,5 +38,7 @@ jobs:
             rm -rf production-cicd-platform
             git clone https://github.com/HARSAWASTHI/production-cicd-platform.git
             cd /home/ubuntu/production-cicd-platform/infra
+            docker stop flask-app
+            docker rm flask-app
             docker-compose pull
             docker-compose up -d
