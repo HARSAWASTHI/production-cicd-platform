@@ -17,7 +17,7 @@ services:
          ports:
           - "80:80"
          volumes:
-          - ./nginx/nginx_conf:/etc/nginx/nginx_conf:ro
+          - .infra/nginx/nginx_conf:/etc/nginx/nginx_conf:ro
          depends_on:
           - web
          networks:
