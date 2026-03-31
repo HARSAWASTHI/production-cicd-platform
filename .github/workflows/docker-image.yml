@@ -35,10 +35,9 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_KEY }}
           script: |
-            docker stop $(docker ps -aq)
-            docker rm $(docker ps -aq)
-            rm -rf production-cicd-platform
-            git clone https://github.com/HARSAWASTHI/production-cicd-platform.git
-            cd /home/ubuntu/production-cicd-platform/infra
+            if [ ! -d "/home/ubuntu/app/.git"]; then
+              git clone https://github.com/HARSAWASTHI/production-cicd-platform/infra.git /home/ubuntu/app
+            fi
+            cd /home/ubuntu/app
             docker-compose pull
             docker-compose up -d
