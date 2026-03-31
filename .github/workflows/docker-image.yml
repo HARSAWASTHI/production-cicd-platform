@@ -35,7 +35,7 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_KEY }}
           script: |
-            cd /home/ubuntu
-            docker-compose down 
+            git clone https://github.com/HARSAWASTHI/production-cicd-platform/tree/16d87e699a16e5a9ccccb4c68062024f13dd23b9/infra
+            cd /production-cicd-platform/infra 
             docker-compose pull
             docker-compose up -d
