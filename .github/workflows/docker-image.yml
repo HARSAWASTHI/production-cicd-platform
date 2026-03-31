@@ -37,6 +37,6 @@ jobs:
           script: |
             rm -rf production-cicd-platform
             git clone https://github.com/HARSAWASTHI/production-cicd-platform.git
-            cd /production-cicd-platform/infra 
+            cd /home/ubuntu/production-cicd-platform/infra
             docker-compose pull
             docker-compose up -d
