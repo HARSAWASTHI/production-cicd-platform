@@ -24,4 +24,4 @@ services:
           - app_network
 
 networks:   
-  app_network
+  app_network:
