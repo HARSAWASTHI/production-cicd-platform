@@ -25,6 +25,3 @@ services:
 
 networks:   
   app_network:
-
-volumes:
-  ./nginx/nginx.conf:
