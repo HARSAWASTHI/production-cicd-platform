@@ -41,5 +41,5 @@ jobs:
             git pull origin master
             fi
             cd /home/ubuntu/app/infra
-            docker-compose pull
-            docker-compose up -d
+            docker compose pull
+            docker compose up -d
