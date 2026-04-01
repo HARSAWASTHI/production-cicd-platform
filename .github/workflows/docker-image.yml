@@ -35,9 +35,11 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           key: ${{ secrets.HOST_KEY }}
           script: |
-            if [ ! -d "/home/ubuntu/app/.git"]; then
+            if [ ! -d "/home/ubuntu/app/.git" ]; then
               git clone https://github.com/HARSAWASTHI/production-cicd-platform/infra.git /home/ubuntu/app
-            fi
+            else
             cd /home/ubuntu/app
+            git pull origin master
+            fi
             docker-compose pull
             docker-compose up -d
