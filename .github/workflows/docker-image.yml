@@ -38,6 +38,7 @@ jobs:
             if [ ! -d "/home/ubuntu/app/.git" ]; then
               git clone https://github.com/HARSAWASTHI/production-cicd-platform.git /home/ubuntu/app
             else
+            cd /home/ubuntu/app
             git pull origin master
             fi
             cd /home/ubuntu/app/infra
